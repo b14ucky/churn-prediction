@@ -41,7 +41,7 @@ class NeuralNet(nn.Module):
                     current_loss: float = loss.item()
                     print(f"loss: {current_loss}")
 
-    def score(self, dataloader: DataLoader) -> torch.float:
+    def score(self, dataloader: DataLoader) -> TensorType[torch.float]:
         size: int = len(dataloader.dataset)
         correct: int = 0
         self.eval()
